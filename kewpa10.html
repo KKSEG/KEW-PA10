@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>KEW-PA 10</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+            margin: 0;
+            padding: 10px; /* Padding around the content */
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align form items to the left */
+            text-align: left; /* Align text to the left */
+            width: 100%; /* Full width for the form */
+            max-width: 1000px; /* Max width for the form */
+            padding: 10px; /* Padding inside the form */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+        }
+        .form-header {
+            display: flex;
+            justify-content: space-between; /* Space between title and header */
+            width: 100%; /* Full width for header */
+            align-items: center; /* Center items vertically */
+        }
+        .header-title {
+            margin: 0; /* Remove margin */
+        }
+        .form-group {
+            display: flex;
+            align-items: center; /* Align items vertically centered */
+            margin-bottom: 5px; /* Space between each row */
+            width: 100%; /* Full width for the form group */
+        }
+        label {
+            width: 350px; /* Fixed width for labels */
+            font-size: 14px; /* Smaller font size for labels */
+        }
+        input, textarea {
+            flex: 1; /* Allow input and textarea to take remaining space */
+            margin-left: 10px; /* Space between label and input */
+            padding: 8px; /* Padding inside the input */
+            font-size: 14px; /* Smaller font size for input and textarea */
+            border: 1px solid #ccc; /* Border for the input */
+            border-radius: 2px; /* Rounded corners */
+        }
+        textarea {
+            height: 50px; /* Height for the textarea */
+            resize: vertical; /* Allow vertical resizing */
+        }
+        h3 {
+            text-align: center; /* Center title */
+            width: 100%; /* Full width for the title */
+            margin: 20px 0 0; /* Margin top for spacing */
+            font-size: 18px; /* Smaller font size for h3 */
+        }
+        h4 {
+            font-size: 16px; /* Smaller font size for h4 */
+        }
+        .signature {
+            margin-top: 20px; /* Space above the signature section */
+        }
+        .button-container {
+            display: flex;
+            justify-content: center; /* Center the button */
+            width: 100%; /* Full width for the container */
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                margin: 0; /* Remove default margin */
+                padding: 0; /* Remove padding */
+            }
+            .form-container {
+                border: none; /* Remove border for print */
+                box-shadow: none; /* Remove shadow for print */
+            }
+            .button-container {
+                display: none; /* Hide the button */
+            }
+            input, textarea {
+                border: none; /* Remove border for print */
+                box-shadow: none; /* Remove shadow for print */
+                background: transparent; /* Make background transparent */
+            }
+        }
+    </style>
+    <script>
+        function printForm() {
+            window.print(); // This will trigger the print dialog
+        }
+    </script>
+</head>
+<body>
+    <form class="form-container" action="index.html" method="post">
+        <div class="form-header">
+            <h6 style="margin: 0; text-align: right; width: 100%;">KEW-PA 10</h6>
+        </div>
+        <h3>BORANG ADUAN KEROSAKAN ASET ALIH KERAJAAN</h3>
+        <h4>Bahagian I ( Untuk diisi oleh Pengadu )</h4>
+        <div class="form-group">
+            <label for="first">1. Jenis Aset:</label>
+            <input type="text" id="first" name="first" required>
+        </div>
+        <div class="form-group">
+            <label for="two">2. Nombor Siri Pendaftaran Aset / Komponen:</label>
+            <input type="text" id="two" name="two" required>
+        </div>
+        <div class="form-group">
+            <label for="third">3. Pengguna Terakhir:</label>
+            <input type="text" id="third" name="third" required>
+        </div>
+        <div class="form-group">
+            <label for="fourth">4. Tarikh Kerosakan:</label>
+            <input type="text" id="fourth" name="fourth" required>
+        </div>
+        <div class="form-group">
+            <label for="fifth">5. Perihal Kerosakan:</label>
+            <input type="text" id="fifth" name="fifth" required>
+        </div>
+        <div class="form-group">
+            <label for="six">6. Nama dan Jawatan:</label>
+            <input type="text" id="six" name="six" required>
+        </div>
+        <div class="form-group">
+            <label for="seven">7. Tarikh:</label>
+            <input type="text" id="seven" name="seven" required>
+        </div>
+        <h4>Bahagian II ( Untuk diisi oleh Pegawai Aset / Pegawai Teknikal )</h4>
+        <div class="form-group">
+            <label for="eight">8. Jumlah Kos Penyelenggaraan Terdahulu:</label>
+            <input type="text" id="eight" name="eight" required>
+        </div>
+        <div class="form-group">
+            <label for="ninth">9. Anggaran Kos Penyelenggaraan:</label>
+            <input type="text" id="ninth" name="ninth" required>
+        </div>
+        <div class="form-group">
+            <label for="tenth">10. Syor dan Ulasan:</label>
+            <input type="text" id="tenth" name="tenth" required>
+        </div>
+        <div class="form-group">
+            <label for="eleventh">11. Nama/Jawatan:</label>
+            <input type="text" id="eleventh" name="eleventh" required>
+        </div>
+        <div class="form-group">
+            <label for="twelve">12. Tarikh:</label>
+            <input type="text" id="twelve" name="twelve" required>
+        </div>
+        <h4>Bahagian III ( Keputusan Ketua Jabatan / bahagian / Seksyen / Unit )</h4>
+        <h4>Diluluskan / Tidak Diluluskan*</h4>
+        <div class="form-group">
+            <label for="ulasan">Ulasan:</label>
+            <textarea id="ulasan" name="ulasan"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="">................................................</label>
+        </div>
+        <div class="form-group signature">
+            <label for="">t.t</label>
+        </div>
+        <div class="form-group">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama">
+        </div>
+        <div class="form-group">
+            <label for="jawatan">Jawatan:</label>
+            <input type="text" id="jawatan" name="jawatan">
+        </div>
+        <div class="form-group">
+            <label for="tarikh-ketua">Tarikh:</label>
+            <input type="text" id="tarikh-ketua" name="tarikh-ketua">
+        </div>
+
+        <div class="button-container">
+            <button type="button" onclick="printForm()">Print</button>
+        </div>
+    </form>
+</body>
+</html>
